@@ -144,46 +144,36 @@
         </div>
     </div>
 </section> -->
-<section class="bg-gradient-to-r from-blue-600 via-blue-800 to-blue-900 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900 lg:h-[calc(100vh-16rem)] flex items-center justify-end">
+<section class="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900 lg:min-h-[calc(100vh-16rem)] flex items-center justify-end">
     <div @staggerSlideIn class="container flex flex-col justify-center w-full px-6 py-10 mx-auto lg:w-1/2 move-center">
-        <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white stagger-item">
-            <span class="text-blue-500">About</span> Me
-        </h1> -->
         <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white stagger-item typing-effect">
-            <span class="text-blue-500">About</span> Me
+            <span class="text-blue-600 dark:text-blue-500">About</span> Me
         </h1>
         
         <div class="mt-10 lg:mt-20 lg:flex lg:items-center">
-            <img class="object-cover object-center w-full lg:w-[32rem] rounded-lg h-96" src="image0.jpeg" alt="Profile Picture" @fadeSlideIn>
+            <img class="object-cover object-center w-full lg:w-[32rem] rounded-lg h-96 shadow-lg" src="image0.jpeg" alt="Profile Picture" @fadeSlideIn>
             <div class="mt-8 lg:px-10 lg:mt-0">
                 <h2 class="text-2xl font-semibold text-gray-800 dark:text-white lg:w-72 stagger-item">
                 Aspiring Full-Stack Developer
                 </h2>
 
-                <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400 stagger-item">
+                <p class="max-w-lg mt-6 text-gray-700 dark:text-gray-400 stagger-item">
                 Hello! I'm Antoni Piwowarski, a passionate Computer Science student specializing in Web Technologies. I'm on a journey to become a full-stack developer, with experience in both frontend and backend technologies. My skillset includes Angular, React, Python, Java, C++, and C#.
                 </p>
 
-                <p class="max-w-lg mt-4 text-gray-500 dark:text-gray-400 stagger-item">
+                <p class="max-w-lg mt-4 text-gray-700 dark:text-gray-400 stagger-item">
                 I'm enthusiastic about creating diverse applications, from web and mobile apps to desktop software. My goal is to leverage my broad technical knowledge to build innovative, user-friendly solutions that make a real impact.
                 </p>
-                <!-- <div class="mt-6 stagger-item">
-                    <button routerLink="/portfolio" class="hover-scale inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800">
-                        View My Portfolio
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div> -->
+
                 <div class="mt-6 flex items-center space-x-4 stagger-item">
-                    <button routerLink="/portfolio" class="hover-scale inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800">
+                    <button routerLink="/portfolio" class="hover-scale inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 shadow-md">
                         View My Portfolio
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </button>
                     
-                    <button (click)="toggleEducation()" class="text-blue-500 hover:text-blue-600 inline-flex items-center px-4 py-2 text-sm font-medium border border-blue-500 rounded-lg hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800">
+                    <button (click)="toggleEducation()" class="text-blue-600 hover:text-blue-700 inline-flex items-center px-4 py-2 text-sm font-medium border border-blue-600 rounded-lg hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 shadow-md">
                         View Education
                         <svg [class.rotate-180]="showEducation" class="w-4 h-4 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -200,14 +190,6 @@
                 <p class="text-sm text-gray-500 dark:text-gray-500 text-center">{{edu.year}}</p>
             </div>
         </div>
-        <!-- <div class="mt-6 flex items-center stagger-item">
-            <button (click)="toggleEducation()" class="text-blue-500 hover:text-blue-600 flex items-center focus:outline-none">
-                <span>View Education</span>
-                <svg [class.rotate-180]="showEducation" class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-        </div> -->
     </div>
 </section>
 
